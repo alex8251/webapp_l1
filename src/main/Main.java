@@ -1,6 +1,8 @@
 package main;
 
+import ru.javawebinar.webapp.model.Contact;
 import ru.javawebinar.webapp.model.Link;
+import ru.javawebinar.webapp.model.Resume;
 import ru.javawebinar.webapp.storage.MapStorageImpl;
 import ru.javawebinar.webapp.storage.Storage;
 
@@ -15,13 +17,12 @@ public class Main {
      * @param args : program arguments
      */
     public static void main(String[] args) {
-        Link link = new Link("name", "url");
-        link.setName("name2");
-        link.setUrl("ulr2");
-        System.out.println(link.toString());
-        System.out.println(link.getName());
 
-        Storage storage = new MapStorageImpl();
-        storage.getClass();
+
+
+        Resume testRes = new Resume();
+
+
     }
+
 }
