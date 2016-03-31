@@ -2,7 +2,7 @@ package ru.javawebinar.webapp.model;
 
 import java.util.List;
 
-public class ResumeSection {
+public class Section {
 
     public enum Name{
         ACHIEVEMENT, QUALIFICATIONS, EXPERIENCE, EDUCATION
@@ -10,7 +10,7 @@ public class ResumeSection {
 
     private Name sectionName;
 
-    public ResumeSection(Name sectionName) {
+    public Section(Name sectionName) {
         this.sectionName = sectionName;
     }
 }

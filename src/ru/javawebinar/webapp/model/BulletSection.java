@@ -2,7 +2,7 @@ package ru.javawebinar.webapp.model;
 
 import java.util.List;
 
-public class BulletSection extends ResumeSection {
+public class BulletSection extends Section {
 
     private List<BulletText> bullets;
 
