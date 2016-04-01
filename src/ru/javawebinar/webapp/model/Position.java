@@ -2,10 +2,11 @@ package ru.javawebinar.webapp.model;
 
 import java.util.List;
 
-public class Position {
+public class Position extends Section{
     private List<String> positions;
 
-    public Position(List<String> positions) {
+    public Position(Type type, List<String> positions) {
+        super(type);
         this.positions = positions;
     }
 

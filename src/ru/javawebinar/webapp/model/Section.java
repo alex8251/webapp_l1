@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Section {
 
-    public enum Name{
-        ACHIEVEMENT, QUALIFICATIONS, EXPERIENCE, EDUCATION
+    public enum Type{
+        OBJECTIVE, ACHIEVEMENT, QUALIFICATIONS, EXPERIENCE, EDUCATION
     }
 
-    private Name sectionName;
+    private Type type;
 
-    public Section(Name sectionName) {
-        this.sectionName = sectionName;
+    public Section(Type type) {
+        this.type = type;
     }
 }

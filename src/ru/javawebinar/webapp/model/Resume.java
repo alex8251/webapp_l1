@@ -1,13 +1,14 @@
 package ru.javawebinar.webapp.model;
 
 import java.util.List;
+import java.util.Map;
 
 public class Resume {
 
-    String fullName;
-    List<Contact> contacts;
-    String additionInfo;
-    List<Section> sections;
+    private String fullName;
+    private Map<String, String> contacts;
+    private String additionInfo;
+    private List<Section> sections;
 
     public String getFullName() {
         return fullName;
@@ -17,11 +18,11 @@ public class Resume {
         this.fullName = fullName;
     }
 
-    public List<Contact> getContacts() {
+    public Map<String, String> getContacts() {
         return contacts;
     }
 
-    public void setContacts(List<Contact> contacts) {
+    public void setContacts(Map<String, String> contacts) {
         this.contacts = contacts;
     }
 

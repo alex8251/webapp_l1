@@ -6,7 +6,7 @@ public class Period {
     private LocalDate startDate;
     private LocalDate endDate;
     private String description;
-    private  String position;
+    private String position;
 
     public LocalDate getStartDate() {
         return startDate;

@@ -3,29 +3,27 @@ package ru.javawebinar.webapp.model;
 import java.util.List;
 
 public class Organization extends Section {
-
-    private String organizationName;
-    private Link contacts;
+    private Link contact;
     private List<Period> periods;
 
-    public Organization(Name sectionName, String organizationName, List<Contact> contacts, List<Period> periods) {
-        super(sectionName);
+    public Organization(Type type, Link contact, List<Period> periods) {
+        super(type);
     }
 
-    public String getOrganizationName() {
-        return organizationName;
+    public String getName() {
+        return contact.getName();
     }
 
-    public void setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
+    public void setName(String name) {
+        contact.setName(name);
     }
 
-    public Link getContacts() {
-        return contacts;
+    public Link getContact() {
+        return contact;
     }
 
-    public void setContacts(Link contacts) {
-        this.contacts = contacts;
+    public void setContact(Link contact) {
+        this.contact = contact;
     }
 
     public List<Period> getPeriods() {

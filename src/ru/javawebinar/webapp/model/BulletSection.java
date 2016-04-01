@@ -4,17 +4,17 @@ import java.util.List;
 
 public class BulletSection extends Section {
 
-    private List<BulletText> bullets;
+    private List<String> bullets;
 
-    public BulletSection(Name sectionName) {
-        super(sectionName);
+    public BulletSection(Type type) {
+        super(type);
     }
 
-    public List<BulletText> getBullets() {
+    public List<String> getBullets() {
         return bullets;
     }
 
-    public void setBullets(List<BulletText> bullets) {
+    public void setBullets(List<String> bullets) {
         this.bullets = bullets;
     }
 }
