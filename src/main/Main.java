@@ -14,6 +14,10 @@ public class Main {
      */
     public static void main(String[] args) {
         Link link = new Link("name", "url");
+        link.setName("name2");
+        link.setUrl("ulr2");
         System.out.println(link.toString());
+        System.out.println(link.getName());
+
     }
 }
