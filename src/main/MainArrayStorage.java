@@ -21,9 +21,9 @@ public class MainArrayStorage {
         r1.addSection(new ListSection(SectionType.QUALIFICATIONS, "Java", "SQL"));
         r1.addSection(new OrganizationSection(SectionType.EXPERIENCE, createExpirience()));
         r1.addSection(new OrganizationSection(SectionType.EDUCATION, createEducation()));
-        System.out.println();
-        System.out.println(printResume(r1));
-        //System.out.println("\n" + r1);
+        System.out.println(r1);
+        //System.out.println(printResume(r1));
+
 
         // TODO test ArrayStorageImpl
     }

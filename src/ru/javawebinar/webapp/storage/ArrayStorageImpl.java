@@ -14,9 +14,18 @@ public class ArrayStorageImpl implements Storage {
 
     private Resume[] array = new Resume[ARRAY_LIMIT];
 
+    private int findLast() {
+        for (int index = 0; index < ARRAY_LIMIT; index++)  {
+            if (array[index].getClass() != Resume.class) {
+                return index;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public void clear() {
-
+        array = new Resume[ARRAY_LIMIT];
     }
 
     @Override
