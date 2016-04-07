@@ -35,6 +35,26 @@ public class Resume implements Comparable {
         sections.add(section);
     }
 
+    public String getUuid() {
+        return uuid;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getAbout() {
+        return about;
+    }
+
+    public List<Contact> getContacts() {
+        return contacts;
+    }
+
+    public List<Section> getSections() {
+        return sections;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
