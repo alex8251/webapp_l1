@@ -55,6 +55,10 @@ public class Resume implements Comparable {
         return sections;
     }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -92,8 +96,11 @@ public class Resume implements Comparable {
     @Override
     public int compareTo(Object o) {
         Resume other = (Resume) o;
-//        return  true ? -1: 1;
-        // TODO: resolve fullName collision
-        return fullName.compareTo(other.fullName);
+        int result = fullName.compareTo(other.fullName);
+        if(result == 0) {
+            return uuid.compareTo(other.getUuid());
+        }
+        return result;
+
     }
 }
