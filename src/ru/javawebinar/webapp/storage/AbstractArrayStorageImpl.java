@@ -23,6 +23,18 @@ abstract public class AbstractArrayStorageImpl extends AbstractStorageImpl {
         return idx;
     }
 
+    protected int searchPlaceForSave(Resume r) {
+        requireNonNull(r, "Resume must not be null");
+        int idx = getIndex(r.getUuid());
+        if (idx >= 0) {
+            throw new IllegalArgumentException("Resume " + r.getUuid() + "already exist");
+        }
+        if (size == ARRAY_LIMIT) {
+            throw new IllegalStateException("Max storage volume " + ARRAY_LIMIT + " is exceeded");
+        }
+        return idx;
+    }
+
     protected abstract int getIndex(String uuid);
 
     @Override
@@ -35,8 +47,20 @@ abstract public class AbstractArrayStorageImpl extends AbstractStorageImpl {
     }
 
     @Override
+    public Resume get(String uuid) {
+        requireNonNull(uuid);
+        return array[getExistedIndex(uuid)];
+    }
+
+    @Override
     public void update(Resume r) {
         requireNonNull(r);
         array[getExistedIndex(r.getUuid())] = r;
     }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
 }

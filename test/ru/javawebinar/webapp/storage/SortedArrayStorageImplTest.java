@@ -4,13 +4,13 @@ import org.junit.BeforeClass;
 
 import static org.junit.Assert.*;
 
-public class ArrayStorageImplTest extends ru.javawebinar.webapp.storage.AbstractArrayStorageImplTest {
+public class SortedArrayStorageImplTest extends AbstractArrayStorageImplTest {
 
-    public ArrayStorageImplTest() {}
+    public SortedArrayStorageImplTest() {}
 
     @BeforeClass
     public static void beforeClass() {
-        storage = new ArrayStorageImpl();
+        storage = new SortedArrayStorageImpl();
         System.out.println("beforeClass");
     }
 }

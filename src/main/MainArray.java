@@ -18,5 +18,6 @@ public class MainArray {
         Object[] objects = (Object[]) contactTypes;
 //        objects[2] = 12;
         System.out.println(Arrays.toString(contactTypes));
+
     }
 }

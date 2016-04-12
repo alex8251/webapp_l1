@@ -15,30 +15,11 @@ public class ArrayStorageImpl extends AbstractArrayStorageImpl {
 
     @Override
     public void save(Resume r) {
-        requireNonNull(r, "Resume must not be null");
-        int idx = getIndex(r.getUuid());
-        if (idx != -1) {
-            throw new IllegalArgumentException("Resume " + r.getUuid() + "already exist");
-        }
-        if (size == ARRAY_LIMIT) {
-            throw new IllegalStateException("Max storage volume " + ARRAY_LIMIT + " is exceeded");
-        }
+        searchPlaceForSave(r);
         array[size++] = r;
     }
 
-    @Override
-    public void update(Resume r) {
-        requireNonNull(r);
-        array[getExistedIndex(r.getUuid())] = r;
-    }
-
-    @Override
-    public Resume get(String uuid) {
-        requireNonNull(uuid);
-        return array[getExistedIndex(uuid)];
-    }
-
-    @Override
+   @Override
     public void delete(String uuid) {
         requireNonNull(uuid);
         array[getExistedIndex(uuid)] = array[--size];
@@ -50,11 +31,6 @@ public class ArrayStorageImpl extends AbstractArrayStorageImpl {
         Resume[] copy = Arrays.copyOf(array, size);
         Arrays.sort(copy);
         return Arrays.asList(copy);
-    }
-
-    @Override
-    public int size() {
-        return size;
     }
 
     @Override

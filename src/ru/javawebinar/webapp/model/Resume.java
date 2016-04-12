@@ -76,6 +76,14 @@ public class Resume implements Comparable {
         return cmp == 0 ? uuid.compareTo(other.uuid) : cmp;
     }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
     public String getUuid() {
         return uuid;
     }
